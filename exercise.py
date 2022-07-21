@@ -1,12 +1,14 @@
-arr = [4,5,734,43,45,100,4,56,23,67,23,58,45]
+i = 20
 
-def sum_odds():
-    total = 0
-    for num in arr:
-        #  check if numbers are odd
-        if num % 2 != 0:
-            total += num
-    return total
-      
+while i >= 0:
+    # check if number is 0
+    if i == 0:
+        print('LIFTOFF')
+    # check if number is multiple of 5
+    elif i %5 == 0:
+        print(f'{i}!')
+    else:
+        print(i)
+    # decrement on each iteration
+    i -= 1
     
-print(sum_odds())
