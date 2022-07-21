@@ -1,20 +1,12 @@
-list_of_numbers = [4,	80,	85,	59,	37, 25, 5, 64, 66, 81, 20, 64, 41, 22, 76, 76, 55, 96, 2, 68]
+my_list = [43,23,6,87,43,1,4,6,3,67,8,3445,3,7,5435,63,346,3,456,734,6,34]
+
+def max_integer(list):
+    max = 0
+    
+    for num in list:
+        if num > max:
+            max = num
+    return max
 
 
-def merge_two_list(list):
-    odd = []
-    even = []
-
-    for i in list:
-        # check if number is even
-        if i % 2 == 0:
-            even.append(i)
-        # check if number is odd
-        if i % 2 != 0:
-            odd.append(i)
-            
-    joined_list = [odd] + [even]
-    return joined_list
-
-
-print(merge_two_list(list_of_numbers))
+print(max_integer(my_list)) # 5435
