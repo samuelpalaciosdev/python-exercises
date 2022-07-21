@@ -1,9 +1,13 @@
-myNumbers = [23,234,345,4356234,243,43,56,2]
+theBools = [0,1,0,0,1,1,1,0,0,1,0,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,1]
 
-def multiplied_by_3(num):
-    return num * 3
+#Your code go here:
 
-new_list = list(map(multiplied_by_3, myNumbers))
+def yes_or_no(num):
+    if num == 1:
+        return 'wiki'
+    elif num == 0:
+        return 'woko'
 
+result = list(map(yes_or_no, theBools))
+print(result)
 
-print(new_list) # [69, 702, 1035, 13068702, 729, 129, 168, 6]
