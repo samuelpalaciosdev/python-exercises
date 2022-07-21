@@ -1,9 +1,14 @@
-my_list = [42, True, "towel", [2,1], 'hello', 34.4, {"name": "juan"}]
+my_sample_list = [3423,5,4,47889,654,8,867543,23,48,5345,234,6,78,54,23,67,3,6,432,55,23,25,12]
 
-new_list = []
-last_index = len(my_list)
 
-for i in range(0, last_index, 1):
-    if type(my_list[i]) == list or type(my_list[i]) == dict:
-        new_list.append(my_list[i])
-print(new_list)
+def sum_all_values(items):
+
+    total= 0
+    last_index = len(items) 
+    
+    for i in range(last_index):
+        total = total + items[i]
+    return total
+   
+
+print(sum_all_values(my_sample_list))
