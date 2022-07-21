@@ -1,14 +1,15 @@
-people = ['juan','ana','michelle','daniella','stefany','lucy','barak']
+chunk_one = [ 'Lebron', 'Aaliyah', 'Diamond', 'Dominique', 'Aliyah', 'Jazmin', 'Darnell' ]
+chunk_two = [ 'Lucas' , 'Jake','Scott','Amy', 'Molly','Hannah','Lucas']
 
-#Your code go here:
-def deletePerson(person_name):
-    new_list = []
-    for i in people:
-        if i != person_name:
-            new_list.append(i)
-    return new_list
+
+def merge_list(list1, list2):
+    merge_list = []
+    for i in list1:
+        merge_list.append(i)
+    for i in list2:
+        merge_list.append(i)
+    return merge_list
+
+    #Your code go here:
     
-    
-print(deletePerson("daniella"))
-print(deletePerson("juan"))
-print(deletePerson("emilio"))
+print(merge_list(chunk_one, chunk_two))
