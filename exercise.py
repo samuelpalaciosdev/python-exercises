@@ -1,12 +1,12 @@
-my_list = [43,23,6,87,43,1,4,6,3,67,8,3445,3,7,5435,63,346,3,456,734,6,34]
+my_list = [2323,4344,2325,324413,21234,24531,2123,42234,544,456,345,42,5445,23,5656,423]
 
-def max_integer(list):
-    max = 0
-    
+def find_average(list):
+    sum = 0
+    last_index = len(my_list)
     for num in list:
-        if num > max:
-            max = num
-    return max
+        sum = sum + num
+    average = sum / last_index
+    return average
 
+print(find_average(my_list))
 
-print(max_integer(my_list)) # 5435
