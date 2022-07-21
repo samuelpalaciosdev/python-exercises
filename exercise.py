@@ -1,14 +1,12 @@
-my_sample_list = [3423,5,4,47889,654,8,867543,23,48,5345,234,6,78,54,23,67,3,6,432,55,23,25,12]
+arr = [4,5,734,43,45,100,4,56,23,67,23,58,45]
 
-
-def sum_all_values(items):
-
-    total= 0
-    last_index = len(items) 
-    
-    for i in range(last_index):
-        total = total + items[i]
+def sum_odds():
+    total = 0
+    for num in arr:
+        #  check if numbers are odd
+        if num % 2 != 0:
+            total += num
     return total
-   
-
-print(sum_all_values(my_sample_list))
+      
+    
+print(sum_odds())
