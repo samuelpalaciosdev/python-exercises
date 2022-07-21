@@ -1,12 +1,9 @@
-my_list = [2323,4344,2325,324413,21234,24531,2123,42234,544,456,345,42,5445,23,5656,423]
+contact = {
+    "fullname": "Jane Doe",
+    "phone": "321-321-4321",
+    "email": "test@test.com"
+}
+#Your code here:
 
-def find_average(list):
-    sum = 0
-    last_index = len(my_list)
-    for num in list:
-        sum = sum + num
-    average = sum / last_index
-    return average
-
-print(find_average(my_list))
-
+for key, value in contact.items():
+    print(f'{key} : {value}')
