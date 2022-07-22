@@ -1,13 +1,14 @@
-theBools = [0,1,0,0,1,1,1,0,0,1,0,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,1]
+incoming_ajax_data = [
+	{ "name": 'Mario', "last_name": 'Montes' },
+	{ "name": 'Joe', "last_name": 'Biden' },
+	{ "name": 'Bill', "last_name": 'Clon' },
+	{ "name": 'Hilary', "last_name": 'Mccafee' },
+	{ "name": 'Bobby', "last_name": 'Mc birth' }
+]
 
-#Your code go here:
+def data_transformer(dicts):
+    new_list = list(map(lambda x: f"{x['name']} {x['last_name']}", dicts))
+    return new_list
 
-def yes_or_no(num):
-    if num == 1:
-        return 'wiki'
-    elif num == 0:
-        return 'woko'
-
-result = list(map(yes_or_no, theBools))
-print(result)
-
+print(data_transformer(incoming_ajax_data))
+# ['Mario Montes', 'Joe Biden', 'Bill Clon', 'Hilary Mccafee', 'Bobby Mc birth']
