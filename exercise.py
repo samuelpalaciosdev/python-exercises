@@ -1,18 +1,13 @@
 
-tasks = [
-	{ "label": 'Eat my lunch', "done": True },
-	{ "label": 'Make the bed', "done": False },
-	{ "label": 'Have some fun', "done": False },
-	{ "label": 'Finish the replits', "done": False },
-	{ "label": 'Replit the finishes', "done": True },
-	{ "label": 'Ask for a raise', "done": False },
-	{ "label": 'Read a book', "done": True },
-	{ "label": 'Make a trip', "done": False }
-]
+names = ['Liam','Emma','Noah','Olivia','William','Ava','James','Isabella','Logan','Sophia',
+'Benjamin','Mia','Mason','Charlotte','Elijah','Amelia','Oliver','Evelyn','Jacob','Abigail',
+'Lucas','Harper','Michael','Emily','Alexander','Elizabeth','Ethan','Avery','Daniel','Sofia',
+'Matthew','Ella','Aiden','Madison','Henry','Scarlett','Joseph','Victoria','Jackson','Aria',
+'Samuel','Grace','Sebastian','Chloe','David','Camila','Carter','Penelope','Wyatt','Riley']
 
+def transform_names():
+    # filter only the names of the list that contains 'am'
+    names_list = list(filter(lambda name: 'am' in name, names))
+    return names_list
 
-# remove undone tasks from list and return the new list
-done_tasks = list(filter(lambda task: task if task['done'] == True else None, tasks))
-
-print(done_tasks)
-
+print(transform_names())
