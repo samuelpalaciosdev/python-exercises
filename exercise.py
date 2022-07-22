@@ -1,13 +1,29 @@
+all_colors = [
+	{"label": 'Red', "sexy": True},
+	{"label": 'Pink', "sexy": False},
+	{"label": 'Orange', "sexy": True},
+	{"label": 'Brown', "sexy": False},
+	{"label": 'Pink', "sexy": True},
+	{"label": 'Violet', "sexy": True},
+	{"label": 'Purple', "sexy": False},
+]
 
-names = ['Liam','Emma','Noah','Olivia','William','Ava','James','Isabella','Logan','Sophia',
-'Benjamin','Mia','Mason','Charlotte','Elijah','Amelia','Oliver','Evelyn','Jacob','Abigail',
-'Lucas','Harper','Michael','Emily','Alexander','Elizabeth','Ethan','Avery','Daniel','Sofia',
-'Matthew','Ella','Aiden','Madison','Henry','Scarlett','Joseph','Victoria','Jackson','Aria',
-'Samuel','Grace','Sebastian','Chloe','David','Camila','Carter','Penelope','Wyatt','Riley']
+def filter_colors():
+    # check if sexy property is true
+    sexy_colors = list(filter(lambda color: color["label"] if color["sexy"] == True else None, all_colors))
+    # return only the label
+    sexy_colors = list(map(lambda color: color['label'], sexy_colors))
+    return sexy_colors
+    
+def generate_li(colors):
+    last_index = len(colors)
+    new_list = []
+    # for each color, create a li
+    for i in range(last_index):
+       new_list.append(f'<li>{colors[i]}</li>')
+    return new_list
+      
 
-def transform_names():
-    # filter only the names of the list that contains 'am'
-    names_list = list(filter(lambda name: 'am' in name, names))
-    return names_list
+print(generate_li(filter_colors()))
+    
 
-print(transform_names())
