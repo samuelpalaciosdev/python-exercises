@@ -1,10 +1,18 @@
-all_names = ["Romario","Boby","Roosevelt","Emiliy", "Michael", "Greta", "Patricia", "Danzalee"]
 
-def names_check(name):
-    # check if first letter of name is R
-    if name[0] == 'R':
-        return name
+tasks = [
+	{ "label": 'Eat my lunch', "done": True },
+	{ "label": 'Make the bed', "done": False },
+	{ "label": 'Have some fun', "done": False },
+	{ "label": 'Finish the replits', "done": False },
+	{ "label": 'Replit the finishes', "done": True },
+	{ "label": 'Ask for a raise', "done": False },
+	{ "label": 'Read a book', "done": True },
+	{ "label": 'Make a trip', "done": False }
+]
 
-resulting_names = list(filter(names_check, all_names))
 
-print(resulting_names)
+# remove undone tasks from list and return the new list
+done_tasks = list(filter(lambda task: task if task['done'] == True else None, tasks))
+
+print(done_tasks)
+
