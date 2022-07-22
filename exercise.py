@@ -1,14 +1,10 @@
-incoming_ajax_data = [
-	{ "name": 'Mario', "last_name": 'Montes' },
-	{ "name": 'Joe', "last_name": 'Biden' },
-	{ "name": 'Bill', "last_name": 'Clon' },
-	{ "name": 'Hilary', "last_name": 'Mccafee' },
-	{ "name": 'Bobby', "last_name": 'Mc birth' }
-]
+all_names = ["Romario","Boby","Roosevelt","Emiliy", "Michael", "Greta", "Patricia", "Danzalee"]
 
-def data_transformer(dicts):
-    new_list = list(map(lambda x: f"{x['name']} {x['last_name']}", dicts))
-    return new_list
+def names_check(name):
+    # check if first letter of name is R
+    if name[0] == 'R':
+        return name
 
-print(data_transformer(incoming_ajax_data))
-# ['Mario Montes', 'Joe Biden', 'Bill Clon', 'Hilary Mccafee', 'Bobby Mc birth']
+resulting_names = list(filter(names_check, all_names))
+
+print(resulting_names)
