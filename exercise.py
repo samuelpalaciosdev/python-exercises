@@ -1,17 +1,8 @@
-# n = number of students
-# k = number of apples
+#Complete the funtion to compute how many seconds passed between the two timestamp.
+def two_timestamp(hr1,min1,sec1,hr2,min2,sec2):
+    total_secs_first =  (hr1 * 3600) + (min1 * 60) + sec1
+    total_secs_second = (hr2 * 3600) + (min2 * 60) + sec2
+    return total_secs_second - total_secs_first
 
-#Complete the function to return:
-#1) How many apples each single student will get.
-#2) How many apples wil remain in the basket.
-
-def apple_sharing(n,k):
-    # numbers of apples evenly by student
-    apples_per_student = k // n
-    # remainder of nro of apples by students
-    apples_remaining = k % n
-
-    return apples_per_student, apples_remaining
-
-#Print the two answer per the example output.
-print(apple_sharing(6,50))
+#Invoke the fuction and pass two timestamps(6 intergers) as its argument.
+print(two_timestamp(1,1,1,2,2,2))
