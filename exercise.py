@@ -1,19 +1,17 @@
-def lyrics_generator(list):
-    store = ''
-    for i in range(len(list)):
-        if list[i] == 0:
-            store += 'Boom '
-        elif i > 1 and list[i] == 1 and list[i - 1] == 1 and list[i - 2] == 1:
-            store += 'Drop the base !!!Break the base!!! '
-        else:
-            store += 'Drop the base '
-    return store
-        
+# n = number of students
+# k = number of apples
 
+#Complete the function to return:
+#1) How many apples each single student will get.
+#2) How many apples wil remain in the basket.
 
-# Your code go above, nothing to change after this line:
-print(lyrics_generator([0,0,1,1,0,0,0]))
-print(lyrics_generator([0,0,1,1,1,0,0,0]))
-print(lyrics_generator([0,0,0]))
-print(lyrics_generator([1,0,1]))
-print(lyrics_generator([1,1,1]))
+def apple_sharing(n,k):
+    # numbers of apples evenly by student
+    apples_per_student = k // n
+    # remainder of nro of apples by students
+    apples_remaining = k % n
+
+    return apples_per_student, apples_remaining
+
+#Print the two answer per the example output.
+print(apple_sharing(6,50))
